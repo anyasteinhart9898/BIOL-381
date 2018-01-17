@@ -8,16 +8,12 @@ output:
     highlight: github
 ---
 
-##Welcome! 
+##Welcome!
+
 <img src="IMG_1606.jpg" width="200" height="200" />
 
+email: Anya.Steinhart@uvm.edu
 
-**bold**
-*italics*
-
-* item 1
-* item 2
-* item 3 
 
 ## Helpful Links   
 * [Course Webpage](https://gotellilab.github.io/Bio381/)   
@@ -26,7 +22,7 @@ output:
 * [R help](http://stackoverflow.com/questions/tagged/r)   
 
 ## Table of contents of Homework Assignments    
-* [Homework 1: Create a Github website ](https://anyasteinhart9898.github.io/BIOL-381/)
+* [Homework 1: Create a Github website  ](https://anyasteinhart9898.github.io/BIOL-381/)
 * [Homework 2: ](#id-section2)
 * [Homework 3: ](#id-section3)
 * [Homework 4: ](#id-section4)
