@@ -9,6 +9,8 @@ output:
 ---
 
 ##Creates a title
+<img src="IMG_1606.jpg" width="200" height="200" />
+
 
 **bold**
 *italics*
