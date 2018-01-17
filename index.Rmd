@@ -2,12 +2,17 @@
 title: "Bio 381 webpage"
 author: "Anya Steinhart"
 date: "January 17, 2018"
-output: html_document
+output:
+  prettydoc::html_pretty:
+    theme: hpstr
+    highlight: github
 ---
 
 ##Creates a title
 
-**italics**
 **bold**
 *italics*
 
+* item 1
+* item 2
+* item 3 
