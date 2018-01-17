@@ -8,7 +8,7 @@ output:
     highlight: github
 ---
 
-##Creates a title
+##Welcome! 
 <img src="IMG_1606.jpg" width="200" height="200" />
 
 
