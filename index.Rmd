@@ -1,0 +1,12 @@
+---
+title: "Bio 381 webpage"
+author: "Anya Steinhart"
+date: "January 17, 2018"
+output: html_document
+---
+
+##Creates a title
+
+*bold*
+**italics**
+
