@@ -9,10 +9,13 @@ output:
 
 ##Welcome!
 
-<img src="IMG_1606.jpg" width="200" height="200" />
+<img src="IMG_2069.jpg" width="200" height="200" />
 
 email: Anya.Steinhart@uvm.edu
 
+
+###About me 
+I am a sophomore undergraduate biological science major at the University of Vermont. I currently work in the Pespeni lab as animal care, and assisting with research on purple sea urchins and ocean acidification! 
 
 ## Helpful Links   
 * [Course Webpage](https://gotellilab.github.io/Bio381/)   
