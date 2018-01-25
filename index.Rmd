@@ -12,6 +12,7 @@ output:
 <img src="IMG_2069.jpg" width="200" height="200" />
 
 email: Anya.Steinhart@uvm.edu
+Office: Bailey Howe Library 
 
 
 ###About me 
