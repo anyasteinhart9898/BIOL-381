@@ -25,8 +25,8 @@ I am a sophomore undergraduate biological science major at the University of Ver
 * [R help](http://stackoverflow.com/questions/tagged/r)   
 
 ## Table of contents of Homework Assignments    
-* [Homework 1: Create a Github website  ](https://anyasteinhart9898.github.io/BIOL-381/)
-* [Homework 2: ](#id-section2)
+* [Create a Github website](https://anyasteinhart9898.github.io/BIOL-381/)
+* [Logic Tree and Early Graph](#id-section2)
 * [Homework 3: ](#id-section3)
 * [Homework 4: ](#id-section4)
 * [Homework 5: ](#id-section5)
@@ -37,3 +37,7 @@ I am a sophomore undergraduate biological science major at the University of Ver
 * [Week 10: ](#id-section10)
 * [Week 11: ](#id-section11)
 
+------
+<div id='id-section1'/>
+### Week 2 
+[Logic Tree and Early Graph](Homework 2 .html)
