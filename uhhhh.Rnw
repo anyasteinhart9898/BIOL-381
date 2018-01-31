@@ -1,0 +1,10 @@
+\documentclass{article}
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+
+\section*{First Section}
+working in \LaTeX isn't so hard!
+
+
+\end{document}

@@ -1,5 +1,7 @@
 ### Logic Tree
 
+A logic tree, demonstrating some of th epossible outcomes of how purple sea urchin larva may react developmentally to a lowering pH due to ocean acidication. 
+
 ```mermaid
 
 graph TD

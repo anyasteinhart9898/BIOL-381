@@ -38,6 +38,6 @@ I am a sophomore undergraduate biological science major at the University of Ver
 * [Week 11: ](#id-section11)
 
 ------
-<div id='id-section1'/>
+<div id='#id-section2'/>
 ### Week 2 
-[Logic Tree and Early Graph](Homework 2 .html)
+[Logic Tree and Early Graph](Early Graph.html)
