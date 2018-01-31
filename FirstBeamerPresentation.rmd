@@ -37,7 +37,7 @@ qplot(x=var1, y=var2)
 
 ## Colored Bullet Points 
 >- Collection mode
->- \color{gray} Spatial and temporal
+>-\color{gray} Spatial and temporal
 >- \color{red} Taxonomic Bias
 >- \color{gray} Sampling \color{black} 
 >- more stuff

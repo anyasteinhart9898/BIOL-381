@@ -1,0 +1,83 @@
+---
+title: "Anya Steinhart and Her Dead Petz"
+author: "Anya Steinhart"
+date: "January 31, 2018"
+output: 
+  beamer_presentation: 
+    colortheme: orchid
+    theme: Copenhagen
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## These (were) my Cats, Sophie and Miss Kitty 
+\begin{picture}(320,260)
+\put(1,1){\includegraphics[height=8.5cm]{IMG_2890.jpg}} \put(90,150){\begin{minipage}[t]{0.5\linewidth}
+\end{minipage}}
+\end{picture}
+
+## Miss Kitty
+
+\begin{picture}(300,250)
+\put(0,20){\includegraphics[height=8cm]{IMG_8247.jpg}} \put(180,180){\begin{minipage}[t]{0.4\linewidth}
+{\color{teal} Fun Facts about Miss Kitty: 
+
+- \color{teal} She is a mancoon mix.   
+
+- \color{teal} My parents adopted her after being in the shelter for 7 months!
+
+-\color{teal} She went deaf when I was in high school.
+
+-\color{teal} Her favorite activity is getting brushed.}
+\end{minipage}}
+\end{picture}
+
+## Sophie
+\begin{picture}(300,250)
+\put(0,20){\includegraphics[height=8cm]{unnamed.jpg}} \put(188,250){\begin{minipage}[t]{0.4\linewidth}
+{\color{magenta} Fun Facts about Sophie! 
+
+- \color{magenta} She is a black Siamese Mix! However, she is good luck! 
+
+- \color{magenta} She is really loud when she wants someone to feed her.
+
+- \color{magenta} I hated her for at least a month when I was 8  because when we first adopted her, she scratched my face. Now she is ma homegirl.
+
+- \color{magenta} The first halloween we had her my mom dressed her up as a witch. It didn't end well for my mom. }
+
+- \color{magenta} She low key looks like a pillow when she sleeps.
+\end{minipage}}
+\end{picture}
+
+## Sophie pt 2
+\begin{picture}(300,250)
+\put(65,20){\includegraphics[height=8cm]{unnamed-2.jpg}} \put(90,60){\begin{minipage}[t]{0.4\linewidth}
+{\color{white} She either wants nothing to do with you, or everything to do with you.}
+\end{minipage}}
+\end{picture}
+
+## Some Bad News
+- \color{blue} Miss Kitty passed away in October of 2017.
+
+- \color{blue} My dad called me while I was walking into BCORE 102 lecture to inform me of the tragedy. Thanks, Eugene.
+
+- \color{blue} She was creamated and is now sitting in my living room. With a Plaque.
+\begin{picture}(80,100)
+\put(10,0){\includegraphics[height=3cm]{IMG_0881.jpg}} 
+\put(100,0){\includegraphics[height=3cm]{IMG_1111.jpg}} 
+\end{picture}
+
+## A New Beginning
+
+>- \color{violet} My Parents (without my input) adopted a new kitty! 
+
+>- \color{violet} They named her Ella. It stands for Lard Ass. 
+
+>- \color{violet} I have no fun facts about her, besides she is really fluffy and mellow.
+
+## Ella! 
+\begin{picture}(300,250)
+\put(65,20){\includegraphics[height=8cm]{whitetrash}} 
+\end{picture}
