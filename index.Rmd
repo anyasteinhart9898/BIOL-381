@@ -44,4 +44,8 @@ I am a sophomore undergraduate biological science major at the University of Ver
 ------
 <div id='#id-section3'/>
 ### Week 3
-##[Beamer Slides on my Cats](deadpetz.pdf)
+[Beamer Slides on my Cats](deadpetz.pdf)
+-----
+<div id='#id-section4'/>
+### Week 4
+[Basic coding Practice](Homework_4.html)

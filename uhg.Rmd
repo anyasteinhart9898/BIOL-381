@@ -1,0 +1,10 @@
+---
+title: "Lab 1 orgo 2"
+author: "Anya Steinhart"
+date: "February 1, 2018"
+output: html_document
+---
+####Objective 
+Vanillin will be reduced to the biologically relevant vanillyl alcohol with sodium borohydride using a minimal volume of ethanol 
+
+####Methods
