@@ -13,22 +13,22 @@ print(a)
 print(b)
 print(x)
 ```
-a.
+a.x^a^b
 ```{r}
 x^a^b
 print(x^a^b)
 ```
-b.
+b.(x^a)^b
 ```{r}
 (x^a)^b
 print((x^a)^b)
 ```
-c.
+c.3x^3+2x^2+1
 ```{r}
 3*x^3 + 2*x^2 + 1
 print(3*x^3 + 2*x^2 + 1)
 ```
-d.
+d.The digit in the second place of z
 ```{r}
 z <- x^a^b
 print(z)
@@ -40,7 +40,7 @@ print(z)
 z <- floor((z%%1)*10)
 print(z)
 ```
-##2. Using the rep and seq functions, create the following vectors
+##2. Using the rep and seq functions, create the following vectors...
 ###a. (1,2,3,4,5,6,7,8,7,6,5,4,3,2,1)
 ```{r}
 a <- seq(from=1,to=8)
@@ -83,32 +83,32 @@ print(queue)
 queue <- c(queue,"serpent")
 print(queue)
 ```
-###b.Sheep leaves
+###b.the sheep enters the ark;
 ```{r}
 queue <- c(queue[-1])
 print(queue)
 ```
-###c.Donkey arrives into front 
+###c.The donkey arrives and talks his way to the front of the line;
 ```{r}
 queue <- c("donkey", queue)
 print(queue)
 ```
-###d. serpent leaves
+###d. The serpent gets impatient and leaves;
 ```{r}
 queue <- c(queue[-5])
 print(queue)
 ```
-###e.owl leaves
+###e.The owl gets bored and leaves;
 ```{r}
 queue <- c(queue[-3])
 print(queue)
 ```
-###f. aphid comes 
+###f.The aphid arrives and the ant invites him to cut in line.
 ```{r}
 queue <- c(queue[-length(queue)], c("aphid","ant"))
 print(queue)
 ```      
-###g. What is the position of the aphid?
+###g. Finally, determine the position of the aphid in the line.
 ```{r}
 grep("aphid",queue)
 ```

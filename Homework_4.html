@@ -134,30 +134,22 @@ print(a)</code></pre>
 <pre><code>## [1] 3.3</code></pre>
 <pre class="r"><code>print(x)</code></pre>
 <pre><code>## [1] 1.1</code></pre>
-<ol style="list-style-type: lower-alpha">
-<li></li>
-</ol>
+<p>a.x<sup>a</sup>b</p>
 <pre class="r"><code>x^a^b</code></pre>
 <pre><code>## [1] 3.61714</code></pre>
 <pre class="r"><code>print(x^a^b)</code></pre>
 <pre><code>## [1] 3.61714</code></pre>
-<ol start="2" style="list-style-type: lower-alpha">
-<li></li>
-</ol>
+<p>b.(x<sup>a)</sup>b</p>
 <pre class="r"><code>(x^a)^b</code></pre>
 <pre><code>## [1] 1.997611</code></pre>
 <pre class="r"><code>print((x^a)^b)</code></pre>
 <pre><code>## [1] 1.997611</code></pre>
-<ol start="3" style="list-style-type: lower-alpha">
-<li></li>
-</ol>
+<p>c.3x<sup>3+2x</sup>2+1</p>
 <pre class="r"><code>3*x^3 + 2*x^2 + 1</code></pre>
 <pre><code>## [1] 7.413</code></pre>
 <pre class="r"><code>print(3*x^3 + 2*x^2 + 1)</code></pre>
 <pre><code>## [1] 7.413</code></pre>
-<ol start="4" style="list-style-type: lower-alpha">
-<li></li>
-</ol>
+<p>d.The digit in the second place of z</p>
 <pre class="r"><code>z &lt;- x^a^b
 print(z)</code></pre>
 <pre><code>## [1] 3.61714</code></pre>
@@ -172,7 +164,7 @@ print(z)</code></pre>
 <pre><code>## [1] 4</code></pre>
 </div>
 <div id="using-the-rep-and-seq-functions-create-the-following-vectors" class="section level2">
-<h2>2. Using the rep and seq functions, create the following vectors</h2>
+<h2>2. Using the rep and seq functions, create the following vectors…</h2>
 <div id="a.-123456787654321" class="section level3">
 <h3>a. (1,2,3,4,5,6,7,8,7,6,5,4,3,2,1)</h3>
 <pre class="r"><code>a &lt;- seq(from=1,to=8)
@@ -207,12 +199,12 @@ print(x)</code></pre>
 <h2>3. Create a vector of two random uniform numbers. In a spatial map, these can be interpreted as x and y coordinates that give the location of an individual (such as a marked forest tree in a plot that has been mapped). Using one of R’s inverse trigonometry functions (asin(), acos(), or atan()), convert these numbers into polar coordinates (If you don’t know what polar coordinates are, read about them on the web or in your calculus textbook).</h2>
 <pre class="r"><code>xy &lt;- runif(2)
 print(xy)</code></pre>
-<pre><code>## [1] 0.3253172 0.2141702</code></pre>
+<pre><code>## [1] 0.5665824 0.5152348</code></pre>
 <pre class="r"><code>polarvector &lt;-vector(mode=&quot;numeric&quot;, length=2)
 polarvector[1] &lt;- sqrt((xy[1]^2+xy[2]^2))
 polarvector[2] &lt;- atan(xy[2]/xy[1])
 print(polarvector)</code></pre>
-<pre><code>## [1] 0.3894870 0.5822177</code></pre>
+<pre><code>## [1] 0.7658215 0.7379696</code></pre>
 </div>
 <div id="suppose-that-queue---csheep-fox-owl-ant-and-that-queue-represents-the-animals-that-are-lined-up-to-enter-noahs-ark-with-the-sheep-at-the-front-of-the-line.-using-r-expressions-update-the-queue-successively-as" class="section level2">
 <h2>4. Suppose that queue &lt;- c(“sheep”, “fox”, “owl”, “ant”) and that queue represents the animals that are lined up to enter Noah’s Ark, with the sheep at the front of the line. Using R expressions, update the queue successively as…</h2>
@@ -225,38 +217,38 @@ print(queue)</code></pre>
 print(queue)</code></pre>
 <pre><code>## [1] &quot;sheep&quot;   &quot;fox&quot;     &quot;owl&quot;     &quot;ant&quot;     &quot;serpent&quot;</code></pre>
 </div>
-<div id="b.sheep-leaves" class="section level3">
-<h3>b.Sheep leaves</h3>
+<div id="b.the-sheep-enters-the-ark" class="section level3">
+<h3>b.the sheep enters the ark;</h3>
 <pre class="r"><code>queue &lt;- c(queue[-1])
 print(queue)</code></pre>
 <pre><code>## [1] &quot;fox&quot;     &quot;owl&quot;     &quot;ant&quot;     &quot;serpent&quot;</code></pre>
 </div>
-<div id="c.donkey-arrives-into-front" class="section level3">
-<h3>c.Donkey arrives into front</h3>
+<div id="c.the-donkey-arrives-and-talks-his-way-to-the-front-of-the-line" class="section level3">
+<h3>c.The donkey arrives and talks his way to the front of the line;</h3>
 <pre class="r"><code>queue &lt;- c(&quot;donkey&quot;, queue)
 print(queue)</code></pre>
 <pre><code>## [1] &quot;donkey&quot;  &quot;fox&quot;     &quot;owl&quot;     &quot;ant&quot;     &quot;serpent&quot;</code></pre>
 </div>
-<div id="d.-serpent-leaves" class="section level3">
-<h3>d. serpent leaves</h3>
+<div id="d.-the-serpent-gets-impatient-and-leaves" class="section level3">
+<h3>d. The serpent gets impatient and leaves;</h3>
 <pre class="r"><code>queue &lt;- c(queue[-5])
 print(queue)</code></pre>
 <pre><code>## [1] &quot;donkey&quot; &quot;fox&quot;    &quot;owl&quot;    &quot;ant&quot;</code></pre>
 </div>
-<div id="e.owl-leaves" class="section level3">
-<h3>e.owl leaves</h3>
+<div id="e.the-owl-gets-bored-and-leaves" class="section level3">
+<h3>e.The owl gets bored and leaves;</h3>
 <pre class="r"><code>queue &lt;- c(queue[-3])
 print(queue)</code></pre>
 <pre><code>## [1] &quot;donkey&quot; &quot;fox&quot;    &quot;ant&quot;</code></pre>
 </div>
-<div id="f.-aphid-comes" class="section level3">
-<h3>f. aphid comes</h3>
+<div id="f.the-aphid-arrives-and-the-ant-invites-him-to-cut-in-line." class="section level3">
+<h3>f.The aphid arrives and the ant invites him to cut in line.</h3>
 <pre class="r"><code>queue &lt;- c(queue[-length(queue)], c(&quot;aphid&quot;,&quot;ant&quot;))
 print(queue)</code></pre>
 <pre><code>## [1] &quot;donkey&quot; &quot;fox&quot;    &quot;aphid&quot;  &quot;ant&quot;</code></pre>
 </div>
-<div id="g.-what-is-the-position-of-the-aphid" class="section level3">
-<h3>g. What is the position of the aphid?</h3>
+<div id="g.-finally-determine-the-position-of-the-aphid-in-the-line." class="section level3">
+<h3>g. Finally, determine the position of the aphid in the line.</h3>
 <pre class="r"><code>grep(&quot;aphid&quot;,queue)</code></pre>
 <pre><code>## [1] 3</code></pre>
 </div>
@@ -277,7 +269,7 @@ print(q)</code></pre>
 <h2>a.create a vector that contains 3 numbers: the proportion of the numbers in z that are less than 0.10, greater than 0.90, and between 0.45 and 0.55.</h2>
 <pre class="r"><code>proportion &lt;- c(mean(z&lt;0.10),mean(z&gt;0.90), mean(z&gt;0.45 &amp; z&lt;0.55))
 print(proportion)</code></pre>
-<pre><code>## [1] 0.103 0.112 0.108</code></pre>
+<pre><code>## [1] 0.099 0.110 0.087</code></pre>
 <div id="b.making-successive-copies-of-z-transform-your-vector-of-uniform-numbers-in-the-following-wayslog-base-10-of-z-z2-ezsquare-root-of-z-and-c-for-each-case-calculate-your-vector-of-3-numbers-to-get-the-new-proportions." class="section level3">
 <h3>b.Making successive copies of z, transform your vector of uniform numbers in the following ways:log (base 10) of z, z^2, e^z,square root of z and c, for each case calculate your vector of 3 numbers to get the new proportions.</h3>
 </div>
@@ -293,7 +285,7 @@ print(proportion)</code></pre>
 <pre class="r"><code>z&lt;- (z)^2
 proportion &lt;- c(mean(z&lt;0.10),mean(z&gt;0.90), mean(z&gt;0.45 &amp; z&lt;0.55))
 print(proportion)</code></pre>
-<pre><code>## [1] 0.530 0.115 0.043</code></pre>
+<pre><code>## [1] 0.512 0.114 0.041</code></pre>
 </div>
 <div id="e2" class="section level3">
 <h3>e^2</h3>
