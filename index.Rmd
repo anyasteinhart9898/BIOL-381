@@ -28,7 +28,7 @@ I am a sophomore undergraduate biological science major at the University of Ver
 * [Create a Github website](https://anyasteinhart9898.github.io/BIOL-381/)
 * [Logic Tree and Early Graph](#id-section2)
 * [Beamer Slides on my Pets](#id-section3)
-* [Homework 4: ](#id-section4)
+* [Basic coding practice](#id-section4)
 * [Homework 5: ](#id-section5)
 * [Homework 6: ](#id-section6) 
 * [Homework 7: ](#id-section7)
