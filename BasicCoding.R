@@ -271,3 +271,44 @@ log10(10)
 q <- seq_len(100)
 q[q%%9==0]
 #-------------------------------------END CLASS FEB 6 
+
+#--------------------------------------- Begin class feb 8 
+
+#relational operators 
+#all return a boolean 
+3<4
+3>5:7
+3 >= 3
+3<=3
+3==4 #DOUBLE !!!!
+3 = 4 #throws an error 
+3 != 4 # != not equal to 
+
+#set operator s
+#compare two atomic vectors 
+#return one atomic vector 
+#always strip out duplicate elements 
+# Before the comparisons 
+
+i <- c(1,1:7)
+print(i)
+j <- 3:10
+print(j)
+
+union(i,j) #all elements
+intersect(i,j) #common elements
+setdiff(i,j) #unique elements of i not j 
+setdiff(j,i) #unique elements of j not in i 
+
+#set of operators that return a single boolean (T or F) 
+setequal(i,j) #asking if they are same 
+setequal(i,i)
+is.element(i,j) #compare elements one at a time in i to j 
+is.element(j,i) #(or i %in% J)
+
+# Logical operators
+z <- 10:20
+z<15
+z < 20 & z >17 #when ran, goes thru each one #AND operator 
+z <20 | z>17 #OR operator 
+#atomic vector- all elements must be same type, and are one dimension 

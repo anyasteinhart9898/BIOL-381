@@ -29,7 +29,7 @@ I am a sophomore undergraduate biological science major at the University of Ver
 * [Logic Tree and Early Graph](#id-section2)
 * [Beamer Slides on my Pets](#id-section3)
 * [Basic coding practice](#id-section4)
-* [Homework 5: ](#id-section5)
+* [Working with Regular Expression: ](#id-section5)
 * [Homework 6: ](#id-section6) 
 * [Homework 7: ](#id-section7)
 * [Homework 8: ](#id-section8)
@@ -49,3 +49,7 @@ I am a sophomore undergraduate biological science major at the University of Ver
 <div id='#id-section4'/>
 ### Week 4
 [Basic coding Practice](Homework_4.html)
+---
+<div id='#id-section5'/>
+### Week 5
+[Working with Regular Expression](Homework 5.html)
