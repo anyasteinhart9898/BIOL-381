@@ -26,10 +26,10 @@ I am a sophomore undergraduate biological science major at the University of Ver
 
 ## Table of contents of Homework Assignments    
 * [Create a Github website](https://anyasteinhart9898.github.io/BIOL-381/)
-* [Logic Tree and Early Graph](#id-section2)
-* [Beamer Slides on my Pets](#id-section3)
-* [Basic coding practice](#id-section4)
-* [Working with Regular Expression: ](#id-section5)
+* [Logic Tree and Early Graph](Early Graph.html)
+* [Beamer Slides on my Pets](deadpetz.pdf)
+* [Basic coding practice](Homework_4.html)
+* [Working with Regular Expression: ](Homework_5_.html)
 * [Homework 6: ](#id-section6) 
 * [Homework 7: ](#id-section7)
 * [Homework 8: ](#id-section8)
