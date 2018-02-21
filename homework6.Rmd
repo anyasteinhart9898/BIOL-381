@@ -1,0 +1,149 @@
+---
+title: "Homework 6"
+author: "Anya Steinhart"
+date: "February 21, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+z <- read.table("AprilData.csv",header=TRUE,sep=",", stringsAsFactors=FALSE)
+str(z)
+summary(z)
+head(z)
+```
+ 
+```{r}
+library(ggplot2) # for graphics
+library(MASS) # for maximum likelihood estimation
+```
+ 
+##Plot histogram of data 
+```{r}
+p1 <- ggplot(data=z, aes(x=BodyLength, y=..density..)) +
+  geom_histogram(color="grey60",fill="cornsilk",size=0.2)
+print(p1)
+```
+
+##Add empirical density curve 
+```{r}
+p1 <-  p1 +  geom_density(linetype="dotted",size=0.75)
+print(p1)
+ 
+```
+
+##Get maximum likelihood parameters for normal 
+```{r}
+normPars <- fitdistr(z$BodyLength,"normal")
+print(normPars)
+ 
+```
+ 
+```{r}
+str(normPars)
+```
+ 
+```{r}
+normPars$estimate["mean"]
+```
+##Plot Normal Probabilty Density 
+```{r}
+meanML <- normPars$estimate["mean"]
+sdML <- normPars$estimate["sd"]
+ 
+xval <- seq(0,max(z$BodyLength),len=length(z$BodyLength))
+ 
+stat <- stat_function(aes(x = xval, y = ..y..), fun = dnorm, colour="red", n = length(z$BodyLength), args = list(mean = meanML, sd = sdML))
+p1 + stat
+ 
+```
+####Plot Exponential Probability
+```{r}
+expoPars <- fitdistr(z$BodyLength,"exponential")
+rateML <- expoPars$estimate["rate"]
+ 
+stat2 <- stat_function(aes(x = xval, y = ..y..), fun = dexp, colour="blue", n = length(z$BodyLength), args = list(rate=rateML))
+p1 + stat + stat2
+```
+##Plot Uniform Probabilty Density
+```{r}
+stat3 <- stat_function(aes(x = xval, y = ..y..), fun = dunif, colour="darkgreen", n = length(z$BodyLength), args = list(min=min(z$BodyLength), max=max(z$BodyLength)))
+ p1 + stat + stat2 + stat3
+
+```
+
+##Plot Gamma Probability Density 
+```{r}
+gammaPars <- fitdistr(z$BodyLength,"gamma")
+shapeML <- gammaPars$estimate["shape"]
+rateML <- gammaPars$estimate["rate"]
+
+stat4 <- stat_function(aes(x = xval, y = ..y..), fun = dgamma, colour="brown", n = length(z$BodyLength), args = list(shape=shapeML, rate=rateML))
+ p1 + stat + stat2 + stat3 + stat4
+```
+
+##Plot Beta Probability Desity 
+```{r}
+pSpecial <- ggplot(data=z, aes(x=BodyLength/(max(BodyLength + 0.1)), y=..density..)) +
+  geom_histogram(color="grey60",fill="cornsilk",size=0.2) + 
+  xlim(c(0,1)) +
+  geom_density(size=0.75,linetype="dotted")
+
+betaPars <- fitdistr(x=z$BodyLength/max(z$BodyLength + 0.1),start=list(shape1=1,shape2=2),"beta")
+shape1ML <- betaPars$estimate["shape1"]
+shape2ML <- betaPars$estimate["shape2"]
+
+statSpecial <- stat_function(aes(x = xval, y = ..y..), fun = dbeta, colour="orchid", n = length(z$BodyLength), args = list(shape1=shape1ML,shape2=shape2ML))
+pSpecial + statSpecial
+```
+
+###What Works the Best
+The best fitting distribution was the normal distribution 
+
+##Simulated Beta Distribution 
+```{R}
+x <-as.data.frame(rnorm(n=120,mean=270.42,sd=46.864135))
+
+names(x) <- "BodyLength"
+#x <- x[x$BodyLength>0,]
+str(x)
+
+p1 <- ggplot(data=x, aes(x=BodyLength, y=..density..)) +
+  geom_histogram(color="grey60",fill="cornsilk",size=0.2) 
+print(p1)
+
+normPars <- fitdistr(x$BodyLength,"normal")
+print(normPars)
+
+
+meanML <- normPars$estimate["mean"]
+sdML <- normPars$estimate["sd"]
+
+xval <- seq(0,max(x$BodyLength),len=length(x$BodyLength))
+
+stat <- stat_function(aes(x = xval, y = ..y..), fun = dnorm, colour="red", n = length(x$BodyLength), args = list(mean = meanML, sd = sdML))
+ p1 + stat
+``` 
+
+##New Histogram 
+```{r} 
+p1 <- ggplot(data=z, aes(x=BodyLength, y=..density..)) +
+  geom_histogram(color="grey60",fill="cornsilk",size=0.2)
+print(p1) 
+normPars <- fitdistr(z$BodyLength,"normal")
+print(normPars)
+
+meanML <- normPars$estimate["mean"]
+sdML <- normPars$estimate["sd"]
+ 
+xval <- seq(0,max(z$BodyLength),len=length(z$BodyLength))
+ 
+stat <- stat_function(aes(x = xval, y = ..y..), fun = dnorm, colour="red", n = length(z$BodyLength), args = list(mean = meanML, sd = sdML))
+p1 + stat
+```
+
+##How do the two histogram profiles compare? Do you think the model is doing a good job of simulating realistic data that match your original measurements? Why or why not. 
+The simulated data fit the density curve better than the actual data. The simulated peaked where the curve peaked. In reality, the larval lengths peaked twice, and had a low where the curve peaked. The simulation cleaned the data up, and made the histogram more aesthetically pleasing, but it doens't match the real data. 
