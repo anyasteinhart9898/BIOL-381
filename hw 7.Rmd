@@ -1,0 +1,81 @@
+---
+title: "Homework 7"
+author: "Anya Steinhart"
+date: "February 28, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+###1.Function to create data 
+```{r}
+dataCreate <- function(mean1=317.59, mean2=235.38, n1=60, n2=60, sd1=30.58, sd2=30.18){
+  mydf <- data.frame(control=rnorm(mean = mean1, n=n1, sd=sd1), test=rnorm(mean=mean2, n=n2, sd=sd2))
+  return(mydf)
+}
+myDF <-dataCreate(mean1=317.59)
+head(myDF)
+
+
+```
+###2. Function for ANOVA
+```{r}
+library(reshape2)
+
+myDF2 <- melt(myDF) 
+ANOVA <- function(data=myDF2){
+  myANOVA <- aov(value~variable, data=data)
+  summary(myANOVA)
+}
+
+ANOVA(data=myDF2)
+ANOVA()
+myANOVA <- aov(value~variable, data=myDF2)
+summary(myANOVA)
+```
+###3. Function to create box plot 
+```{r}
+
+library(ggplot2)
+urchinBOXPLOT <- function(data=myDF2){
+  ggplot(data=data,aes(x=variable, y=value, fill=variable)) + geom_boxplot()
+}
+urchinBOXPLOT()
+```
+
+###Attempts at running anova with different values
+```{r}
+df5 <- dataCreate(mean1=375.28, mean2=375.5)
+df5<-melt(df5)
+ANOVA(data=df5)
+urchinBOXPLOT(df5)
+```
+
+```{r}
+df6 <- dataCreate(mean1 = 100, mean2 = 780)
+df6 <- melt(df6)
+ANOVA(data=df6)
+urchinBOXPLOT(df6)
+```
+
+### Changing the Standard Deviation 
+```{r}
+df7<- dataCreate (sd1 = 10, sd2 = 75)
+df7 <- melt(df7)
+ANOVA(data=df7)
+urchinBOXPLOT(df7)
+
+```
+
+### Changing the sampling size 
+```{r}
+df8<- dataCreate (n1 = 10, n2= 10)
+df8 <- melt(df8)
+ANOVA(data=df8)
+urchinBOXPLOT(df8)
+```
+
+###Summary 
+When the *mean* of the control data and the treatment data are similar or almost the same, the p value between of these data increases closer to zero. As the means between the control and the treaments grow apart from each other, the p value decreases, showing there is a significant difference between the sets. As the *Standard deviation* increases between the sets, the p value also decreases. These changes are visible in the box plots. However, I thought that decreasing the *sampling size* would increase the p value. When I changed the sampling size, the p value became more significant than before. 
