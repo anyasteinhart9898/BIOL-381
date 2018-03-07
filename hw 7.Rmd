@@ -46,6 +46,7 @@ urchinBOXPLOT()
 ```
 
 ###Attempts at running anova with different values
+#####Changing the means 
 ```{r}
 df5 <- dataCreate(mean1=375.28, mean2=375.5)
 df5<-melt(df5)
@@ -79,3 +80,70 @@ urchinBOXPLOT(df8)
 
 ###Summary 
 When the *mean* of the control data and the treatment data are similar or almost the same, the p value between of these data increases closer to zero. As the means between the control and the treaments grow apart from each other, the p value decreases, showing there is a significant difference between the sets. As the *Standard deviation* increases between the sets, the p value also decreases. These changes are visible in the box plots. However, I thought that decreasing the *sampling size* would increase the p value. When I changed the sampling size, the p value became more significant than before. 
+
+
+### Different Distribution- Uniform Distrubution 
+
+```{r}
+dataCreate2 <- function(min1=180.44, min2=250.12, n1=60, n2=60, max1=304.72, max2=395.45){
+  mydf <- data.frame(control=runif(min = min1, n=n1, max=max1), test=runif(min=min2, n=n2, max=max2))
+  return(mydf)
+}
+myDFU <-dataCreate2(min1=180.44)
+head(myDFU)
+
+```
+
+#New ANOVA Function 
+```{r}
+library(reshape2)
+myDFU2 <- melt(myDFU) 
+ANOVA <- function(data=myDFU2){
+  myANOVA <- aov(value~variable, data=data)
+  summary(myANOVA)
+}
+
+ANOVA(data=myDFU2)
+ANOVA()
+myANOVA <- aov(value~variable, data=myDFU2)
+summary(myANOVA)
+```
+
+### New Box Plot Function
+```{r}
+library(ggplot2)
+urchinBOXPLOT <- function(data=myDFU2){
+  ggplot(data=data,aes(x=variable, y=value, fill=variable)) + geom_boxplot()
+}
+urchinBOXPLOT()
+```
+
+### Running New ANOVAs. Changing Minimums and Maximums 
+```{r}
+dfU3 <- dataCreate2 (min1 = 100, min2 = 100)
+dfU3 <- melt(dfU3)
+ANOVA(data=dfU3)
+urchinBOXPLOT(dfU3)
+
+dfU5 <- dataCreate2 (min1 = 250, min2 = 250)
+dfU5 <- melt(dfU5)
+ANOVA(data=dfU5)
+urchinBOXPLOT(dfU5)
+```
+#Changing the treatment size
+```{r}
+dfU6 <- dataCreate2 (n1 = 4, n2 = 4)
+dfU6 <- melt(dfU6)
+ANOVA(data=dfU6)
+urchinBOXPLOT(dfU6)
+```
+
+```{r}
+dfU4 <- dataCreate2 (min1 = 100, min2 = 100, max1 = 300, max2 = 300)
+dfU4 <- melt(dfU4)
+ANOVA(data=dfU4)
+urchinBOXPLOT(dfU4)
+```
+
+####Summary 
+Setting the minimums to the same value, but keeping the maximums the same intial value originally placed in the function, results in an increase of the p value. However, the p value was still very significant. As expected, the p value increased to insignificantance when the minumum and maximum values of the control and treament data are set to be equal. Decrease the sample size resulted in an increased p value, while increased sample size resulted in a decreased p value. 
