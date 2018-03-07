@@ -147,4 +147,4 @@ urchinBOXPLOT(dfU4)
 ```
 
 ####Summary 
-Setting the minimums to the same value, but keeping the maximums the same intial value originally placed in the function, results in an increase of the p value. However, the p value was still very significant. As expected, the p value increased to insignificantance when the minumum and maximum values of the control and treament data are set to be equal. Decrease the sample size resulted in an increased p value, while increased sample size resulted in a decreased p value. 
+Using the uniform distribution, setting the minimums to the same value, but keeping the maximums the same intial value originally placed in the function, results in an increase of the p value. However, the p value was still very significant. As expected, the p value increased to insignificance when the minumum and maximum values of the control and treament data are set to be equal. Decrease in the sample size resulted in an increased p value, while increased sample size resulted in a decreased p value. 
