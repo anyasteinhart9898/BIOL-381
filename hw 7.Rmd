@@ -138,6 +138,7 @@ ANOVA(data=dfU6)
 urchinBOXPLOT(dfU6)
 ```
 
+#Changing both minimum and maximum
 ```{r}
 dfU4 <- dataCreate2 (min1 = 100, min2 = 100, max1 = 300, max2 = 300)
 dfU4 <- melt(dfU4)
