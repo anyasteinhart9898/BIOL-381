@@ -32,8 +32,7 @@ I am a sophomore undergraduate biological science major at the University of Ver
 * [Working with Regular Expression: ](Homework_5_.html)
 * [Probability Distributions](homework6.html) 
 * [Creating Fake Data Sets To Explore Hypotheses ](hw_7.html)
-* [Homework 8: ](#id-section8)
-* [Homework 9: ](#id-section9)   
+* [Organizing Code with Structured Programming](Homework9.html)   
 * [Week 10: ](#id-section10)
 * [Week 11: ](#id-section11)
 
@@ -59,5 +58,9 @@ I am a sophomore undergraduate biological science major at the University of Ver
 [Probability Distributions](homework6.html)
 ---
 <div id='#id-section7'/>
-### Week 7
+### Week 7 and 8 
 [Creating Fake Data Sets To Explore Hypotheses](hw_7.html)
+---
+<div id='#id-section9'/>
+### Week 10
+[Organizing Code with Structured Programming](Homework9.html)

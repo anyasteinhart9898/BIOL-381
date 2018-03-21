@@ -1,0 +1,59 @@
+---
+title: "Homework 9"
+author: "Anya Steinhart"
+date: "March 21, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+u <- 300
+v <- 100
+w <- 60
+x <- 60 
+y <- 30
+z <- 31
+dataCreate <- function(mean1=u, mean2=v, n1=w, n2=x, sd1=y, sd2=z){
+  myDF <- data.frame(control=rnorm(mean = mean1, n=n1, sd=sd1), test=rnorm(mean=mean2, n=n2, sd=sd2))
+  return(myDF)
+}
+myDF <- dataCreate(mean1=u)
+head(myDF)
+
+
+library(reshape2)
+myDF2 <- melt(myDF) 
+ANOVA <- function(data=myDF2){
+  myANOVA <- aov(value~variable, data=data)
+  summary(myANOVA)
+}
+
+ANOVA(data=myDF2)
+ANOVA()
+myANOVA <- aov(value~variable, data=myDF2)
+summary(myANOVA)
+
+
+library(ggplot2)
+urchinBOXPLOT <- function(data=myDF2){
+  ggplot(data=data,aes(x=variable, y=value, fill=variable)) + geom_boxplot()
+}
+urchinBOXPLOT()
+
+#Playing around with the functions 
+
+library(ggplot2)
+tester <- myDF2
+larvaLength <- ifelse(tester > 0.05, rnorm(n=w:x, mean=u:v, sd=30:31))
+hist(larvaLength)
+
+
+
+
+
+```
+
+
