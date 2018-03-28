@@ -72,13 +72,52 @@ for (i in seq_along(myDat)) {
   cat("loop number =", i, "vector element=", myDat[i], "\n")
 }
 #dont change  object dimension in loop 
+# c, cbind, rbind, list
+
 myDat <- runif(1)
+
 for (i in 2:10) {
   temp <- signif(runif(1), digits = 2)
   myDat <- c(myDat, temp)
   cat("loop number =", i, "vector element=", myDat[i], "\n")
 }
+myDat
+#------------------------------------------------------------
 
-  
+#dont write a loop if u can vectorize 
 
+myDat <- 1:10
+for (i in seq_along(myDat)){
+  myDat[i] <- myDat[i] + myDat[i]^2
+  cat("loop number =", i, "vector element=", myDat[i], "\n")
+}
+z<-1:10
+z <- z + z^2
+z
   
+z <- c(10,2,4)
+for (i in seq_along(z)){
+  cat("i=", i, "z[i]=", z[i],"\n")
+}
+
+# counter variable retains its final value 
+i
+#use "next" to skip elements in a loop
+#operate only on odd numbered elements
+z <- 1:20
+#zstore <- vector(mode="numeric", length=length(z))
+zstore <- rep(NA, length(z))
+zstore
+for (i in seq_along(z)) {
+  if( i %% 2==0) next
+  print(i)
+  zstore[i] <- i 
+}
+zstore <- zstore[complete.cases(zstore)]
+
+z<- 1:20
+zsub <- z[z %% 2!=0]
+length(zsub)
+for (i in seq_along(zsub)) {
+  cat("i=", i , "zsub[i]=", zsub[i], "\n")
+}
