@@ -34,7 +34,7 @@ I am a sophomore undergraduate biological science major at the University of Ver
 * [Creating Fake Data Sets To Explore Hypotheses ](hw_7.html)
 * [Organizing Code with Structured Programming](Homework9.html)   
 * [Batch Processing ](Homework10.html)
-* [Week 11: ](#id-section11)
+* [Function plotting and randomization tests] (Homework11.html)
 
 ------
 <div id='#id-section2'/>
@@ -68,3 +68,7 @@ I am a sophomore undergraduate biological science major at the University of Ver
 <div id='#id-section10'/>
 ### Week 11
 [Batch Processing](Homework10.html)
+---
+<div id='#id-section11'/>
+### Week 12
+[Function plotting and randomization tests](Homework11.html)
