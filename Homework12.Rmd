@@ -1,0 +1,71 @@
+---
+title: "Homework 12"
+author: "Anya Steinhart"
+date: "April 11, 2018"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, warning=FALSE, message=FALSE}
+#Preliminaries
+library(ggplot2)
+library(ggthemes)
+library(patchwork)
+library(TeachingDemos)
+char2seed("coffee")
+d <- read.csv("hw12data.csv")
+str(d)
+
+# First Graph
+g1 <- ggplot(data=d, mapping=aes(x=FG,y=AGB)) +
+  geom_point() +
+  geom_smooth()
+print(g1)
+# Second Graph
+g2 <- ggplot(data=d,
+             mapping=aes(x=FG,fill=I("pink"),color=I("seagreen"))) +
+  geom_bar(stat="count") +
+  theme(legend.position = "none")
+print(g2)
+# Third Graph
+g3 <- ggplot(data=d,
+             mapping=aes(x=AGB,fill=I("magenta"),color=I("black"))) + geom_histogram()
+print(g3)
+# Fourth Graph
+g4 <- ggplot(data=d,
+             mapping=aes(x=Comp,y=BGB,fill=BGB)) + geom_boxplot() + geom_jitter() + theme(legend.position="none")
+g4
+
+#New Fancy Chart- This did not work the way I wanted it to, but it is a cool tool. 
+
+g5 <- ggplot(data=d, aes(x=FG, y=AGB)) + 
+  geom_point(size=3) + 
+  geom_segment(aes(x=FG, 
+                   xend=FG, 
+                   y=0, 
+                   yend=AGB)) + 
+  labs(title="Lollipop Chart", 
+       subtitle="FG Vs AGB", 
+       caption="source: hw12data") + 
+  theme(axis.text.x = element_text(angle=65, vjust=0.6))
+
+print(g5)
+
+#Adding then all together
+g1 + { 
+  g2 + 
+    g3 + 
+      g4 +
+       plot_layout(ncol=1)
+    
+  
+} 
+plot_layout(ncol=1)
+
+```
+
