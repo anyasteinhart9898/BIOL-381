@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 #Adding a URL when clicking on the point
 library(scatterD3)
-iris$url <- paste0("https://www.google.com?q=",colnames(iris$Species))
+iris$url <- paste0("https://www.google.com?q=",colnames(iris))
  
 scatterD3(data=iris, 
           x=Petal.Length, 
