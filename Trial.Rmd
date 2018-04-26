@@ -13,10 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r}
 library(scatterD3)
-iris$url1 <- paste0("https://www.google.com?q=","iris setosa")
-iris$url2 <- paste0("https://www.google.com?q=","iris versicolor") 
-iris$url3 <- paste0("https://www.google.com?q=","iris virginica") 
-iris$url<- c("iris$url1", "iris$url3", "iris$url2")
+iris$url <- paste0("https://www.google.com?q=", colnames<-iris$Species)
 scatterD3(data=iris, 
           x=Petal.Length, 
           y=Sepal.Length, 
