@@ -9,7 +9,7 @@ output:
 
 ##Welcome!
 
-<img src="IMG_2069.jpg" width="200" height="200" />
+<img src="unnamed-3.jpg" width="200" height="200" />
 
 email: Anya.Steinhart@uvm.edu
 Office: Bailey Howe Library 
@@ -36,6 +36,7 @@ I am a sophomore undergraduate biological science major at the University of Ver
 * [Batch Processing ](Homework10.html)
 * [Function Plotting and Randomization Tests](Homework11.html)
 * [GGplot Graphs](Homework12.html)
+* [I hope no one is paying attention](Trial.html)
 ------
 <div id='#id-section2'/>
 ### Week 2 
@@ -76,3 +77,4 @@ I am a sophomore undergraduate biological science major at the University of Ver
 <div id='#id-section13'/>
 ### Week 13
 [GGplot](Homework12.html)
+---

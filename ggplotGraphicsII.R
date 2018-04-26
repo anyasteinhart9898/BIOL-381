@@ -156,6 +156,8 @@ m2 <- ggplot(data=mpg, mapping= aes(x=displ, y=cty, color=drv)) +
 m2 +facet_grid(.~ class)
 
 #Fitting w box plots over a continuous variable 
-m2 <- ggplot(data=mpg, mapping= aes(x=displ, y=cty,)) + 
+m2 <- ggplot(data=mpg, mapping =(aes(x=displ, y=cty, group=drv, fill=drv))) + 
   geom_boxplot(method="lm", se=FALSE)
 m2 +facet_grid(.~ class)
+
+print(m2)
