@@ -93,8 +93,7 @@ print(p1)
 p1 <- ggplot(data=d, 
              mapping=aes(x=displ, y=cty)) + geom_point(size=5, shape=21, color="black", fill="coral") + ggtitle("Hello")
 print(p1)
-p1 <- ggplot(data=d, 
-             mapping=aes(x=displ, y=cty)) + geom_point(size=5, shape=21, color="black", fill="coral") + ggtitle("Hello") + xlab("My x label") + ylab("My Y label") + xlim(0,4)+ ylim(0,20)
+p1 <- ggplot(data=d,mapping=aes(x=displ, y=cty)) + geom_point(size=5, shape=21, color="black", fill="coral") + ggtitle("Hello") + xlab("My x label") + ylab("My Y label") + xlim(0,4)+ ylim(0,20)
 p1
 
 g1 <- ggplot(data=d, mapping =aes(x=displ, y=cty)) + 

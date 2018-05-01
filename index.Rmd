@@ -36,7 +36,8 @@ I am a sophomore undergraduate biological science major at the University of Ver
 * [Batch Processing ](Homework10.html)
 * [Function Plotting and Randomization Tests](Homework11.html)
 * [GGplot Graphs](Homework12.html)
-* [I hope no one is paying attention](Trial.html)
+* [Scatter D3 html](ScatterD3.html)
+* [Scatter D3 .Rmd](ScatterD3.Rmd)
 ------
 <div id='#id-section2'/>
 ### Week 2 

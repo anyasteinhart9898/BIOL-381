@@ -1,0 +1,22 @@
+---
+title: "Trial run"
+author: "Anya Steinhart"
+date: "April 25, 2018"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+#Adding a URL when clicking on the point
+iris$url <- paste0("https://www.google.com", colnames(iris$Species))
+scatterD3(data=iris, 
+          x=Petal.Length, 
+          y=Sepal.Length, 
+          col_var = Species, colors = c("Pink","Plum", "PowderBlue"))
+```
+
