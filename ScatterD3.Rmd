@@ -1,7 +1,7 @@
 ---
 title: "Scatter D3"
 author: "Anya Steinhart"
-date: "April 29, 2018"
+date: "02 May 2018"
 output: html_document
 editor_options: 
   chunk_output_type: console
@@ -113,7 +113,7 @@ scatterD3(data=iris2, x=Petal.Length, y=Sepal.Length, col_var = Species, colors 
 #Adding a callback, again this uses java script- not showing 
 scatterD3(data = iris2, x = Petal.Length, y = Sepal.Length,
           click_callback = "function(id, index) {
-          alert('scatterplot ID: ' + id + ' - Point index: ' + index) 
+         alert('scatterplot ID: ' + id + ' - Point index: ' + index) 
           }")
 #Adding confident ellipses 
 scatterD3( data=iris2, x=Petal.Length,y=Sepal.Length, col_var = Species, color= c("Pink","Plum", "PowderBlue"), ellipses=TRUE)
@@ -135,7 +135,7 @@ g1 <- ggplot() +
   geom_text(data=labels,
             aes(x=lab_x,
                 y=lab_y,
-                label=lab))
+               label=lab))
 print(g1)
 ```
 
@@ -165,11 +165,11 @@ data(MisLinks)
 data(MisNodes)
 #look real fast- also take up a lot of space
 
-MisNodes
-MisLinks
+#MisNodes
+#MisLinks
 #Plot
 forceNetwork(Links = MisLinks, Nodes = MisNodes,
-             Source = "source", Target = "target",
+            Source = "source", Target = "target",
              Value = "value", NodeID = "name",
              Group = "group", opacity = 0.8)
 #We can also build sanky network graphs as well
