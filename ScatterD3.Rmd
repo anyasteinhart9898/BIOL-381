@@ -97,8 +97,8 @@ Add caption
 ```{r}
 #Adding titles and text
 scatterD3(data=iris2, x=Petal.Length, xlab="Petal Length", y=Sepal.Length, ylab = "Sepal Length", col_var = Species, colors = c("Pink","Plum", "PowderBlue"), 
-          caption=list(title="Anya needs a raise",
-                       text="Anya needs a raise because she is always covered in salt water and urchin poop, and lifts heavy buckets. She should also get an A in all her classes but Lindin Higgins and Nathan Jebbett are ruining her life"))
+          caption=list(title="This is my title",
+                       text="This is my text. I do not know what to say here. "))
 #Adding captions to points- this uses java script which I won't pretend to understand but it works
 tooltips <- paste( "This is an iris <I dont know what this means>","</strong><br/>with a", iris$Petal.Width, "inch petal width!")
 scatterD3(data = iris2, x =Petal.Length, y = Sepal.Length, tooltip_text = tooltips)
@@ -165,8 +165,8 @@ data(MisLinks)
 data(MisNodes)
 #look real fast- also take up a lot of space
 
-#MisNodes
-#MisLinks
+MisNodes
+MisLinks
 #Plot
 forceNetwork(Links = MisLinks, Nodes = MisNodes,
              Source = "source", Target = "target",
